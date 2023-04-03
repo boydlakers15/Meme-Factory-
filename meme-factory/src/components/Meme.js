@@ -1,6 +1,8 @@
 import React from "react"
+import UploadImage from "./UploadImage"
 
-export default function Meme() {
+export default function Meme({isFired}) {
+    const fileInputRef = React.useRef(null);
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
@@ -37,6 +39,22 @@ export default function Meme() {
             [name]: value
         }))
     }
+
+    function handleImageUpload(event) {
+        const file = event.target.files[0];
+        if (!file) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = (event) => {
+          setMeme((prevMeme) => ({
+            ...prevMeme,
+            randomImage: event.target.result,
+          }));
+        };
+      }
+
     
     return (
         <main>
@@ -63,12 +81,33 @@ export default function Meme() {
                 >
                     Get a new meme image 🖼
                 </button>
+
+                <div className="form--upload">
+          <label htmlFor="fileInput">Upload Image:</label>
+          <input
+            type="file"
+            id="fileInput"
+            ref={fileInputRef}
+            style={{ display: "none" }}
+            onChange={handleImageUpload}
+          />
+          <button
+            onClick={() => {
+              fileInputRef.current.click();
+            }}
+          >
+            Choose File
+          </button>
+        </div>
+
             </div>
             <div className="meme">
-                <img src={meme.randomImage} className="meme--image" />
+            <img src={meme.randomImage} className="meme--image" /> 
+                
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>
             </div>
+            
         </main>
     )
 }

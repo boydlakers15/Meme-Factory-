@@ -1,6 +1,8 @@
-import React from "react"
+import React, {useState} from "react"
 import Header from "./components/Header"
+import UploadImage from "./components/UploadImage"
 import Meme from "./components/Meme"
+
 /**
  * Challenge: 
  * - Create a Meme component.
@@ -9,10 +11,14 @@ import Meme from "./components/Meme"
  * - Don't worry about adding any functionality yet
  */
 export default function App() {
+ 
+  
+
     return (
         <div>
             <Header />
-            <Meme />
+           <Meme />
+            <UploadImage  />
         </div>
     )
 }
