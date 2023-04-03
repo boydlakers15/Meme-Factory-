@@ -1,12 +1,15 @@
 import React from "react"
-import UploadImage from "./UploadImage"
+import ExportMeme from "./ExportMeme";
+
+
 
 export default function Meme({isFired}) {
+  const memeRef = React.useRef(null);
     const fileInputRef = React.useRef(null);
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://i.imgflip.com/1bij.jpg" 
+        randomImage: "http://i.imgflip.com/" 
     })
     const [allMemes, setAllMemes] = React.useState([])
     
@@ -55,7 +58,9 @@ export default function Meme({isFired}) {
         };
       }
 
-    
+      
+
+
     return (
         <main>
             <div className="form">
@@ -75,34 +80,35 @@ export default function Meme({isFired}) {
                     value={meme.bottomText}
                     onChange={handleChange}
                 />
-                <button 
-                    className="form--button"
-                    onClick={getMemeImage}
+                 <button
+                  className="form--button"
+                  onClick={getMemeImage}
                 >
-                    Get a new meme image 🖼
+                  Get a new meme image 🖼
                 </button>
-
-                <div className="form--upload">
-          <label htmlFor="fileInput">Upload Image:</label>
-          <input
-            type="file"
-            id="fileInput"
-            ref={fileInputRef}
-            style={{ display: "none" }}
-            onChange={handleImageUpload}
-          />
-          <button
-            onClick={() => {
-              fileInputRef.current.click();
-            }}
-          >
-            Choose File
-          </button>
-        </div>
+                <button
+                  className="form--button"
+                  onClick={() => {
+                    fileInputRef.current.click();
+                  }}
+                >
+                  Choose File
+                </button>
+                <input
+                  type="file"
+                  id="fileInput"
+                  ref={fileInputRef}
+                  style={{ display: "none" }}
+                  onChange={handleImageUpload}
+                />   
 
             </div>
+            <div>
+            <ExportMeme memeImageRef={memeRef} />
+
+              </div>
             <div className="meme">
-            <img src={meme.randomImage} className="meme--image" /> 
+            <img src={meme.randomImage} className="meme--image" ref={memeRef} crossOrigin="anonymous"/> 
                 
                 <h2 className="meme--text top">{meme.topText}</h2>
                 <h2 className="meme--text bottom">{meme.bottomText}</h2>

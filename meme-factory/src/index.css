@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -5,17 +7,21 @@
 body {
   font-family: "Karla", sans-serif;
   margin: 0;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(85, 127, 241, 0.5), rgba(102, 233, 238, 0.5));
 }
 
 main {
   padding: 36px;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
 .header {
   display: flex;
   align-items: center;
   height: 65px;
-  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  background: linear-gradient(to right, rgba(183, 62, 240, 1), rgba(118, 121, 121, 1));
   color: white;
   padding: 20px;
 }
@@ -40,6 +46,7 @@ main {
   grid-template: 40px 40px / 1fr 1fr;
   gap: 17px;
   margin-bottom: 17px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form--input {
@@ -50,48 +57,70 @@ main {
 }
 
 .form--button {
-  grid-column: 1 / -1;
   font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #868585 100%);
   color: white;
   border: none;
   cursor: pointer;
 }
 
+button {
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90.41deg, #e3c5ec 1.14%, #868484 100%);
+}
+
+
 .meme {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  max-width: 100%;
 }
 
 .meme--image {
   max-width: 100%;
-  border-radius: 10px;
-  margin-left:450px;
+  height: auto;
+  object-fit: contain;
 }
 
 .meme--text {
   position: absolute;
-  width: 80%;
+  color: white;
+  font-size: 2rem;
   text-align: center;
+  text-shadow: 2px 2px black;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meme--text.top {
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-  margin: 15px 0;
-  padding: 0 5px;
-  font-family: impact, sans-serif;
-  font-size: 2em;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 1px;
-  text-shadow:
-      2px 2px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000,
-      -2px 2px 0 #000,
-      0 2px 0 #000,
-      2px 0 0 #000,
-      0 -2px 0 #000,
-      -2px 0 0 #000,
-      2px 2px 5px #000;
+}
+
+.meme--text.bottom {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.form--buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.form--buttons-container button {
+  margin-top: 5px;
 }
 
 .bottom {

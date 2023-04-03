@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import Header from "./components/Header"
-import UploadImage from "./components/UploadImage"
+
 import Meme from "./components/Meme"
 
 /**
@@ -18,7 +18,7 @@ export default function App() {
         <div>
             <Header />
            <Meme />
-            <UploadImage  />
+            
         </div>
     )
 }
