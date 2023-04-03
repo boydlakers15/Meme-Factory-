@@ -28,7 +28,7 @@ export default function ExportMeme({ memeImageRef, topText, bottomText }) {
   };
 
   return (
-    <div style={{ paddingLeft: "70px" }} className="form">
+    <div style={{ paddingLeft: "34.5%" }} className="form">
       <button className="form--button" onClick={downloadImage}>
         Export as Image 📷
       </button>
