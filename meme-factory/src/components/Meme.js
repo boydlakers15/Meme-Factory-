@@ -52,6 +52,27 @@ export default function Meme({isFired}) {
   return (
     <main>
       <div className="form">
+      <button
+          className="form--button"
+          onClick={getMemeImage}
+        >
+          Get Random Image 🖼
+        </button>
+        <button
+          className="form--button"
+          onClick={() => {
+            fileInputRef.current.click();
+          }}
+        >
+          Choose Image
+        </button>
+        <input
+          type="file"
+          id="fileInput"
+          ref={fileInputRef}
+          style={{ display: "none" }}
+          onChange={handleImageUpload}
+        /> 
         <input 
           type="text"
           placeholder="Top text"
@@ -68,36 +89,17 @@ export default function Meme({isFired}) {
           value={meme.bottomText}
           onChange={handleChange}
         />
-        <button
-          className="form--button"
-          onClick={getMemeImage}
-        >
-          Get a new meme image 🖼
-        </button>
-        <button
-          className="form--button"
-          onClick={() => {
-            fileInputRef.current.click();
-          }}
-        >
-          Choose File
-        </button>
-        <input
-          type="file"
-          id="fileInput"
-          ref={fileInputRef}
-          style={{ display: "none" }}
-          onChange={handleImageUpload}
-        />   
+          
       </div>
       <div>
-        <ExportMeme memeImageRef={memeRef} topText={meme.topText} bottomText={meme.bottomText} />
+        
       </div>
       <div className="meme">
         <img src={meme.randomImage} className="meme--image" ref={memeRef} crossOrigin="anonymous"/> 
         <h2 className="meme--text top">{meme.topText}</h2>
         <h2 className="meme--text bottom">{meme.bottomText}</h2>
       </div>
+      <ExportMeme memeImageRef={memeRef} topText={meme.topText} bottomText={meme.bottomText} />
     </main>
   )
 }
