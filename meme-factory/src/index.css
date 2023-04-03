@@ -50,7 +50,7 @@ main {
 }
 
 .form--input {
-  font-family: "Karla", sans-serif;
+  font-family: 'Tangerine', serif;
   border-radius: 5px;
   border: 1px solid #D5D4D8;
   text-indent: 5px;
@@ -89,15 +89,18 @@ button {
 }
 
 .meme--text {
-  position: absolute;
-  color: white;
+  position: absolute ;
+  color: rgb(255, 0, 0);
   font-size: 2rem;
   text-align: center;
-  text-shadow: 2px 2px black;
+  text-shadow: 2px 2px rgb(0, 255, 34);
   width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
 }
 
 .meme--text.top {
