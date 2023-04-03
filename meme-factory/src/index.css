@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+label {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-family:  'Tangerine', serif;
+  transition: 0.5s;
+}
+
+a {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-family:  'Tangerine', serif;
+  transition: 0.5s;
+}
+
 body {
   font-family: "Karla", sans-serif;
   margin: 0;

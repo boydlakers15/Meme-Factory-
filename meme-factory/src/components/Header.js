@@ -4,11 +4,11 @@ export default function Header() {
     return (
         <header className="header">
             <img 
-                src="./images/troll-face.png" 
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Trollface_non-free.png/220px-Trollface_non-free.png" 
                 className="header--image"
             />
             <h2 className="header--title">Meme Generator</h2>
-            <h4 className="header--project">React Course - Project 3</h4>
+            <h4 className="header--project"><center><label>Click Here for Ref:&nbsp;</label><a  href='https://www.allrecipes.com/recipe/283771/schupfnudeln-german-fried-potato-dumplings/'>Click Me</a></center></h4>
         </header>
     )
 }
