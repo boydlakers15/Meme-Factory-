@@ -53,6 +53,7 @@ export default function Meme({isFired}) {
     <main>
       <div className="form">
       <button
+      style={{fontfamily: 'fantasy'}}
           className="form--button"
           onClick={getMemeImage}
         >
@@ -64,7 +65,7 @@ export default function Meme({isFired}) {
             fileInputRef.current.click();
           }}
         >
-          Choose Image
+          Choose Image 📷
         </button>
         <input
           type="file"

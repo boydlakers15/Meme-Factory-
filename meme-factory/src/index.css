@@ -40,7 +40,7 @@ main {
   align-items: center;
   height: 65px;
   background: rgb(0,236,255);
-background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,1) 100%);
+  background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,1) 100%);
   color: white;
   padding: 20px;
 }
@@ -69,17 +69,17 @@ background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,
 }
 
 .form--input {
-  font-family: 'Tangerine', serif;
   border-radius: 5px;
   border: 1px solid #D5D4D8;
   text-indent: 5px;
+ 
 }
 
 .form--button {
-  font-family: "Karla", sans-serif;
   border-radius: 5px;
-  background: linear-gradient(90.41deg, #711F8D 1.14%, #868585 100%);
-  color: white;
+  background: rgb(0,236,255);
+  background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,1) 100%);
+  color: rgb(0, 0, 0);
   border: none;
   cursor: pointer;
 }
@@ -88,7 +88,8 @@ button {
   border: none;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(90.41deg, #e3c5ec 1.14%, #868484 100%);
+  background: rgb(0,236,255);
+  background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,1) 100%);
 }
 
 
