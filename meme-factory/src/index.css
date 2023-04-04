@@ -39,7 +39,8 @@ main {
   display: flex;
   align-items: center;
   height: 65px;
-  background: linear-gradient(to right, rgba(183, 62, 240, 1), rgba(118, 121, 121, 1));
+  background: rgb(0,236,255);
+background: radial-gradient(circle, rgba(41, 132, 236, 0.5) 43%, rgba(162,0,255,1) 100%);
   color: white;
   padding: 20px;
 }
